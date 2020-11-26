@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Picker</title>
+</head>
+<style type="text/css">
+    body
+        {
+         flex: 20px
+           
+        } 
+    #judul
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }    
+    
+    </style>
+    
+    <body><center>
+        <h1 id="judul" align="center"> Silahkan Pilih Ikan Cupang Anda!</h1> 
+          <br>
+            <select onchange="gantigambar();" id="listgambar">
+            <option value="">Jenis-Jenis Ikan Cupang</option>		          
+            <option value="bluerim.jpg">Bluerim</option>
+            <option value="crowntail.jpg">Crowntail</option>
+            <option value="halfmoon.jpg">Halfmoon</option>
+            <option value="hellboy.jpg">Hellboy</option>
+            <option value="nemocandy.jpg">Nemo Candy</option>
+            <option value="reddragon.jpg">Red Dragon</option>
+        </select>		
+        <br/>
+        <img src="" style="width: 40%" id="gambar">
+        <script type="text/javascript">	
+            function gantigambar()
+             {		
+                 let gambar = document.getElementById("listgambar").value;		
+                 document.getElementById("gambar").src = gambar;		
+                 alert("Ini adalah ikan " + gambar);	  
+               }
+           </script>
+     </body>
+</html>
